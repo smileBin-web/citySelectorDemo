@@ -1,13 +1,7 @@
-# citySelectorDemo 使用案例
+// citySelectorDemo 使用案例
 
 import React, {PureComponent} from 'react';
-
-
-
 import SelectorForAddress from '../components/SelectorForAddress';
-
-
-
 
 export default class TestSelector extends PureComponent{
     constructor(props){
@@ -28,55 +22,55 @@ export default class TestSelector extends PureComponent{
    
     render(){
         return <div>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据行政划分查询省和市(省中不包含全国)
                 type = '00'
                 onChange = {(obj) => {this.onChange(obj, 'instance1', this)}}
             />
             <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据行政划分查询省和市(省中包含全国)
                 type = '01'
                 onChange = {(obj) => {this.onChange(obj, 'instance2', this)}}
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据行政划分查询省和市和区(省中包含全国)
                 type = '010'
                 onChange = {(obj) => {this.onChange(obj, 'instance3', this)}}
                 selected = {{provinceId: 140000, cityId: 140300, regionId: 140311}}
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据行政划分查询省和市和区(省中不包含全国)
                 type = '000'
                 onChange = {(obj) => {this.onChange(obj, 'instance4', this)}}
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据开通区域查询省和市（市中不包含二级市）
                 type = '10'
                 onChange = {(obj) => {this.onChange(obj, 'instance5', this)}}
-                moduleType = '40'
+                moduleType = '40' //查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //跟据开通区域查询省和市（市中包含二级市）
                 type = '11'
                 onChange = {(obj) => {this.onChange(obj, 'instance6', this)}}
-                moduleType = '40'
+                moduleType = '40'  //查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //根据开通区域查询省和市和区（区中不包含二级市）
                 type = '110'
                 onChange = {(obj) => {this.onChange(obj, 'instance7', this)}}
-                moduleType = '40'
+                moduleType = '40' //查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //根据开通区域查询省和市和区（区中只有二级市）
                 type = '101'
                 onChange = {(obj) => {this.onChange(obj, 'instance8', this)}}
-                moduleType = '40'
+                moduleType = '40' //查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
             />
              <br/>
-            <SelectorForAddress 
+            <SelectorForAddress //根据开通区域查询省和市和区（区中包含二级市）
                 type= '102'
                 onChange = {(obj) => {this.onChange(obj, 'instance9', this)}}
-                moduleType = '40'
+                moduleType = '40' //查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
                 selected={this.state.selected}
             />
             
