@@ -15,7 +15,7 @@ import SelectorForAddress from '../components/SelectorForAddress';
     moduleType = '40'  
 />
 ```
-####需要用到多个实例（两个以上）
+#### 需要用到多个实例（两个以上）
 ```
 <div>
     <SelectorForAddress
