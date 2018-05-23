@@ -113,16 +113,26 @@ export default class TestSelector extends PureComponent{
 ```
 ### 参数说明
  > 根据不同的业务需求会有多种使用形式
+
  > 形式一: 跟据行政划分查询省和市(省中包含全国 type = '01' 省中不包含全国 type = '00') 
+
  > 形式二：跟据行政划分查询省和市和区(省中包含全国 type = '010' 省中不包含全国 type = '000')
+
  > 形式三：跟据开通区域查询省和市（市中不包含二级市 type = '10'）
+
  > 形式四：跟据开通区域查询省和市（市中包含二级市 type = '11'）
+
  > 形式五：根据开通区域查询省和市和区（区中不包含二级市 type= '110'）
+
  > 形式六：根据开通区域查询省和市和区（区中只有二级市 type = '101'）
+
  > 形式七：根据开通区域查询省和市和区（区中包含二级市 type = '102'）
 
 > @prop {String} type 参考上述使用形式传递 必传
+
 > @prop {Function} onChange 该方法用来同步跟踪组件内部状态的变化 onChange(object) object={provinceId, provinceName, cityId, cityName, regionId, regionName} 
+
 > @prop {Object} selected 设置组件默认值 selected = {provinceId, cityId, regionId}
+
 > @prop {String} moduleType 查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
  
