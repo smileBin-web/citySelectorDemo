@@ -1,4 +1,4 @@
-## citySelectorDemo 使用案例
+## 城市选择器组件使用说明文档
 
 ### 引入依赖 跟据当前组件的位置引入 SelectorForAddress 选择器组件
 ```
@@ -25,7 +25,7 @@ import SelectorForAddress from '../components/SelectorForAddress';
     />
     <SelectorForAddress
         type = '11'
-        onChange = {(obj) => {this.onChange(obj, 'instance1', this)}}
+        onChange = {(obj) => {this.onChange(obj, 'instance2', this)}}
         moduleType = '40'  
     />
 </div>
