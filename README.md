@@ -1,8 +1,13 @@
-// citySelectorDemo 使用案例
+## citySelectorDemo 使用案例
 
+### 引入依赖 跟据当前组件的位置引入 SelectorForAddress 选择器组件
+```
 import React, {PureComponent} from 'react';
 import SelectorForAddress from '../components/SelectorForAddress';
+```
 
+### 实例化组件案例
+```
 export default class TestSelector extends PureComponent{
     constructor(props){
         super(props);
@@ -86,3 +91,4 @@ export default class TestSelector extends PureComponent{
         console.log(that);
     }
 }
+```
