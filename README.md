@@ -30,6 +30,18 @@ import SelectorForAddress from '../components/SelectorForAddress';
     />
 </div>
 ```
+#### 需要用到多个选框（两个以上) 且最后一个选框根据对应的列表数据的有无 选择性显示
+```
+<div>
+    <SelectorForAddress
+        type = '101'
+        onChange = {(obj) => {this.onChange(obj, 'instance1', this)}}
+        moduleType = '40'  
+        lastOptional
+    />
+</div>
+```
+
 ### 完整的使用案例
 ```
 export default class TestSelector extends PureComponent{
@@ -135,4 +147,6 @@ export default class TestSelector extends PureComponent{
 > @prop {Object} selected 设置组件默认值 selected = {provinceId, cityId, regionId}
 
 > @prop {String} moduleType 查询权限码 按开通区域查询省市区时使用 10-商品模块、20-订单模块、30-用户模块、40-配送站 默认为 '10'
+
+> @prop {Boolean} lastOptional  是否需要将最后一个选框根据对应的列表数据的有无选择性显示和隐藏 默认为false(即选框的个数固定为type的长度)
  
